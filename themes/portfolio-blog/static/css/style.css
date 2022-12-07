@@ -1,0 +1,34 @@
+:root {
+	--primary: #546e7a !important;
+	--font-family: "Open Sans", Sans-serif !important;
+}
+
+#professional-name {
+	font-size: 48px;
+	font-weight: 600;
+}
+
+#professional-title {
+	letter-spacing: 0.125rem;
+	font-weight: normal;
+}
+
+#hero {
+	background-image: url("/images/engineer.svg");
+	background-size: 24rem;
+	background-position-x: center;
+	background-position-y: bottom;
+	padding-top: 4rem;
+	padding-bottom: 12rem;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.nav-logo {
+	height: 24px;
+	width: 24px;
+	margin-bottom: 2px;
+	margin-right: 2px;
+}

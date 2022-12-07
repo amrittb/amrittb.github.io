@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section id="intro" class="container-fluid">
+	<div id="hero" class="container">
+		<h1 id="professional-name" class="center-text animate__animated animate__fadeInUp">
+			{{ .Site.Params.LastName }} {{ .Site.Params.FirstName}}
+		</h1>
+		<h4 id="professional-title" class="center-text animate__animated animate__fadeInUp">
+			{{ .Site.Params.Subtitle }}
+		</h4>
+	</div>
+</section>
+{{ end }}

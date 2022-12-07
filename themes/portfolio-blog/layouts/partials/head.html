@@ -1,0 +1,24 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Google Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+	<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+	<link href="/images/logo.svg" rel="icon" />
+
+	<!-- Cytoscape for Graph view -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.23.0/cytoscape.min.js"
+		integrity="sha512-gEWKnYYa1/1c3jOuT9PR7NxiVI1bwn02DeJGsl+lMVQ1fWMNvtjkjxIApTdbJ/wcDjQmbf+McWahXwipdC9bGA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<!-- Fontawesome -->
+	<script src="https://kit.fontawesome.com/0fcbbe9b7d.js" crossorigin="anonymous"></script>
+
+	{{ $title := print .Site.Title " | " .Title }}
+	{{ if .IsHome }}{{ $title = print .Site.Params.LastName " " .Site.Params.FirstName " | " .Title }}{{ end }}
+	<title>{{ $title }}</title>
+</head>

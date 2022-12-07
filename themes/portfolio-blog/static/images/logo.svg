@@ -1,0 +1,75 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" stroke="null" style="vector-effect: non-scaling-stroke;" version="1.1">
+ <style>
+  @media (prefers-color-scheme: dark) {
+    path {
+      fill: white;
+    }
+
+    path#letter {
+      fill: #11191f;
+    }
+  }
+    
+  @media (prefers-color-scheme: light) {
+    path {
+      fill: #11191f;
+    }
+
+    path#letter {
+      fill: white;
+    }
+  }
+ </style>
+ <g stroke="null">
+  <title stroke="null">Layer 1</title>
+  <g stroke="null" stroke-width="0" id="svg_67">
+
+   <g stroke="null" id="svg_1">
+    <g stroke="null" transform="matrix(1.36458 0 0 1.36458 1053.79 598.425)" id="svg_257">
+     <svg stroke="null" y="-435.3339" x="-877.03675" id="svg_24" width="576" height="360" viewBox="0 0 576 360">
+      <g stroke="null" id="svg_258">
+       <svg stroke="null" id="svg_25"/>
+      </g>
+      <g stroke="null" id="svg_259">
+       <svg stroke="null" id="svg_26" width="576" height="360" viewBox="0 0 576 360">
+        <g stroke="null" id="svg_27">
+         <path stroke="null" id="svg_28" data-fill-palette-color="tertiary" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-miterlimit="10" fill-rule="nonzero" fill="#11191f" d="m132.115,90l155.885,-90l155.885,90l0,180l-155.885,90l-155.885,-90l0,-180z"/>
+        </g>
+        <g stroke="null" id="svg_10" transform="matrix(1,0,0,1,213.2901907356948,99)">
+         <svg stroke="null" id="svg_29" width="149.41962" height="162" viewBox="0 0 149.41961852861036 162">
+          <g stroke="null" id="svg_260">
+           <svg stroke="null" id="svg_30" width="149.41962" height="162" viewBox="0 0 149.41961852861036 162">
+            <g stroke="null" id="svg_261">
+             <svg stroke="null" id="svg_31" width="149.41962" height="162" viewBox="0 0 149.41961852861036 162">
+              <g stroke="null" id="svg_262">
+               <svg stroke="null" id="svg_32" width="149.41962" height="162" viewBox="0 0 149.41961852861036 162">
+                <g stroke="null" id="svg_263">
+                 <svg stroke="null" id="svg_33" width="149.41962" height="162" viewBox="0 0 149.41961852861036 162">
+                  <g stroke="null" id="svg_264">
+                   <svg stroke="null" id="svg_34" width="149.41962" height="162" viewBox="0 0 149.41961852861036 162">
+                    <g stroke="null" id="svg_265">
+                     <svg stroke="null" id="svg_35" data-palette-color="#ffffff" height="162" viewBox="0 -35.84 33.06 35.84" width="149.41962">
+                      <path stroke="null" id="letter" data-fill-palette-color="quaternary" class="undefined-text-0" fill="#ffffff" d="m33.06,0l-6.2,0l-3.57,-9.91l-13.65,0l-3.49,9.91l-6.15,0l13.35,-35.84l6.35,0l13.36,35.84zm-21.71,-14.94l10.4,0l-3.34,-9.72q-0.37,-0.97 -1.01,-3.07q-0.65,-2.1 -0.9,-3.08l0,0q-0.66,3 -1.92,6.57l0,0l-3.23,9.3z"/>
+                     </svg>
+                    </g>
+                   </svg>
+                  </g>
+                 </svg>
+                </g>
+               </svg>
+              </g>
+             </svg>
+            </g>
+           </svg>
+          </g>
+         </svg>
+        </g>
+       </svg>
+      </g>
+     </svg>
+    </g>
+    <rect stroke="null" x="-143.00027" y="4.37481" id="svg_36" visibility="hidden" fill="none" height="491.25036" width="786.00057"/>
+   </g>
+  </g>
+ </g>
+</svg>
