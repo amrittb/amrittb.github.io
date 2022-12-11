@@ -32,3 +32,52 @@
 	margin-bottom: 2px;
 	margin-right: 2px;
 }
+
+svg#expertise-network {
+	fill: #333;
+	stroke: #999;
+	stroke-opacity: 0.6;
+}
+
+svg#expertise-network.hovered {
+	fill-opacity: 0.2;
+	stroke-opacity: 0.2;
+}
+
+svg#expertise-network g#nodes {
+	stroke: none;
+}
+
+svg#expertise-network g#links line {
+	transition-property: stroke, storke-opacity;
+	transition-duration: 500ms;
+}
+
+svg#expertise-network g#links line.active  {
+	stroke: red;
+	stroke-opacity: 1;
+}
+
+svg#expertise-network g#nodes circle {
+	transition-property: fill, fill-opacity;
+	transition-duration: 500ms;
+}
+
+svg#expertise-network g#nodes circle:hover {
+	cursor: pointer;
+}
+
+svg#expertise-network g#nodes circle.active {
+	fill: #222 !important;
+	fill-opacity: 1;
+}
+
+svg#expertise-network g#labels text {
+	transition-property: fill, fill-opacity;
+	transition-duration: 500ms;
+}
+
+svg#expertise-network g#labels .active text {
+	fill: #222 !important;
+	fill-opacity: 1;
+}

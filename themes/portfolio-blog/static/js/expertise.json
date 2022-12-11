@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "name": "Microservices"
+    },
+    {
+      "id": 2,
+      "name": "API"
+    },
+    {
+      "id": 3,
+      "name": "Rest API"
+    },
+    {
+      "id": 4,
+      "name": "RPC"
+    },
+    {
+      "id": 5,
+      "name": "gRPC"
+    },
+    {
+      "id": 6,
+      "name": "Open API"
+    }
+  ],
+  "links": [
+    { "source": 1, "target": 2 },
+    { "source": 2, "target": 3 },
+    { "source": 2, "target": 4 },
+    { "source": 3, "target": 6 },
+    { "source": 4, "target": 5 }
+  ]
+}
