@@ -27,14 +27,13 @@ function drag(simulation) {
   fetch("/js/expertise.json")
     .then((response) => response.json())
     .then((data) => {
-      const width = 600;
-      const height = 600;
+      const width = 480;
+      const height = (9 / 16) * width; // 16:9 aspect ratio
 
       const expertiseNetwork = d3
         .select("#expertise-network-container")
         .append("svg")
         .attr("id", "expertise-network")
-        .attr("height", height)
         .attr("width", width)
         .attr("viewBox", [-width / 2, -height / 2, width, height]);
 
@@ -126,7 +125,7 @@ function drag(simulation) {
         .attr("dy", 20)
         .attr("text-anchor", "middle")
         .attr("font-size", "0.5em")
-        .text((d) => d.id + ":" + d.name);
+        .text((d) => d.name);
 
       simulation.on("tick", () => {
         link
@@ -136,8 +135,6 @@ function drag(simulation) {
           .attr("y2", (d) => d.target.y);
 
         node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
-
-        // node.attr("transform", (d) => "translate(" + d.x + "," + d.y + ")");
         label.attr("transform", (d) => "translate(" + d.x + "," + d.y + ")");
       });
     });
