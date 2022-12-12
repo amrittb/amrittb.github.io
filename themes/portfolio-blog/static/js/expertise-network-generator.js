@@ -27,8 +27,8 @@ function drag(simulation) {
   fetch("/js/expertise.json")
     .then((response) => response.json())
     .then((data) => {
-      const width = 480;
-      const height = (9 / 16) * width; // 16:9 aspect ratio
+      const width = 320;
+      const height = width; // 1:1 aspect ratio
 
       const expertiseNetwork = d3
         .select("#expertise-network-container")
