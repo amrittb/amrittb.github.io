@@ -1,17 +1,37 @@
 {{ define "main" }}
 <section id="intro" class="container-fluid">
 	<div id="hero" class="container">
-		<h1 id="professional-name" class="center-text animate__animated animate__fadeInUp">
+		<h1 id="professional-name" class="center-text" data-aos="fade-up">
 			{{ .Site.Params.LastName }} {{ .Site.Params.FirstName}}
 		</h1>
-		<h4 id="professional-title" class="center-text animate__animated animate__fadeInUp">
+		<h4 id="professional-title" class="center-text" data-aos="fade-up" data-aos-delay="200"
+			style="margin-bottom: 0">
 			{{ .Site.Params.Subtitle }}
 		</h4>
+		<div id="hero-img" class="center-text">
+			<img src="/images/engineer.svg" alt="" data-aos="fade-in" data-aos-delay="400">
+		</div>
+		<div id="hero-scroll" class="center-text">
+			<i class="fa-solid fa-angles-down" data-aos="fade-up" data-aos-delay="600"></i>
+		</div>
 	</div>
 </section>
+
 <section id="expertise" class="container-fluid">
-	<div id="expertise-network-container"></div>
+	<h3 class="center-text" data-aos="fade-up">Expertise</h3>
+	<div id="expertise-network-container" data-aos="fade-in"></div>
 </section>
+
+<section id="professional-experience" class="container-fluid">
+	<h3 class="center-text" data-aos="fade-up">Professional Experience</h3>
+
+</section>
+
+<section id="showcase" class="container-fluid">
+	<h3 class="center-text" data-aos="fade-up">Showcase</h3>
+
+</section>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
 <script src="/js/expertise-network-generator.js"></script>

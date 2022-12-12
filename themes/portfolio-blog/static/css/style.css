@@ -15,12 +15,15 @@
 }
 
 #hero {
-	background-image: url("/images/engineer.svg");
-	background-size: 24rem;
-	background-position-x: center;
-	background-position-y: bottom;
 	padding-top: 4rem;
-	padding-bottom: 12rem;
+}
+
+#hero #hero-img img {
+	max-width: 440px;
+}
+
+#hero #hero-scroll {
+	margin-top: 2rem;
 }
 
 .center-text {
