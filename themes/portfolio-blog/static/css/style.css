@@ -26,6 +26,24 @@
 	margin-top: 2rem;
 }
 
+#hero #hero-scroll i {
+	animation: pulse-vertical 2s infinite;
+}
+
+@keyframes pulse-vertical {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	20% {
+		transform: translate(0, 10px);
+	}
+
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
 .center-text {
 	text-align: center;
 }
