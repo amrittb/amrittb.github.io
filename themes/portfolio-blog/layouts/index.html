@@ -9,7 +9,7 @@
 			{{ .Site.Params.Subtitle }}
 		</h4>
 		<div id="hero-img" class="center-text">
-			<img src="/images/engineer.svg" alt="" data-aos="fade-in" data-aos-delay="400">
+			<img src="/images/engineer.svg" alt="" data-aos="fade-in" data-aos-delay="400" />
 		</div>
 		<div id="hero-scroll" class="center-text">
 			<i class="fa-solid fa-angles-down" data-aos="fade-up" data-aos-delay="600" data-aos-anchor="#hero-img"></i>
@@ -17,21 +17,62 @@
 	</div>
 </section>
 
-<section id="expertise" class="container-fluid">
+<section id="expertise" class="container">
 	<h3 class="center-text" data-aos="fade-up">Expertise</h3>
 	<div id="expertise-network-container" data-aos="fade-in"></div>
 </section>
 
-<section id="professional-experience" class="container-fluid">
+<section id="professional-experience" class="container" data-aos="fade-in">
 	<h3 class="center-text" data-aos="fade-up">Professional Experience</h3>
-
+	<div id="experience-container">
+		<div class="experience">
+			<div class="experience-date">
+				<div class="experience-end">Present</div>
+				<div class="experience-date-divider"></div>
+				<div class="experience-start">May 2019</div>
+			</div>
+			<div class="experience-detail">
+				<div class="experience-role-title headings">
+					<h4>Software Engineer</h4>
+					<h5><a href="https://global.rakuten.com/corp/" target="_blank">Rakuten Group, Inc.</a></h5>
+				</div>
+				<div class="experience-role-detail">
+					<ul>
+						<li>Transitioned monolithic application into several microservices</li>
+						<li>Built system architecture and lead development of SaaS projects</li>
+						<li>On-premis to cloud migration of microservices</li>
+						<li>Built horizontally scalable APIs to handle thousands of users</li>
+						<li>Created streaming systems to handle millions of events per day</li>
+						<li>Developed batch jobs to process Gigabytes of data using Big Data tools</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="experience">
+			<div class="experience-date">
+				<div class="experience-end">Apr 2019</div>
+				<div class="experience-date-divider"></div>
+				<div class="experience-start">Jun 2018</div>
+			</div>
+			<div class="experience-detail">
+				<div class="experience-role-title headings">
+					<h4>VR Developer</h4>
+					<h5><a href="https://www.paracosma.com/" target="_blank">Paracosma, Inc.</a></h5>
+				</div>
+				<div class="experience-role-detail">
+					<ul>
+						<li>Developed several levels of Open World VR Game</li>
+						<li>User training applications built using AR & VR to reduce on-site training cost</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 <section id="showcase" class="container-fluid">
 	<h3 class="center-text" data-aos="fade-up">Showcase</h3>
-
 </section>
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
 <script src="/js/expertise-network-generator.js"></script>

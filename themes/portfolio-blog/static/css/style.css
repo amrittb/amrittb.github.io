@@ -111,3 +111,71 @@ svg#expertise-network g#labels text {
 svg#expertise-network g#labels .active text {
 	fill-opacity: 1;
 }
+
+
+#experience-container .experience {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.experience-date {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	align-self: stretch;
+	max-width: 100px;
+	align-items: stretch;
+	font-size: 0.8rem;
+	color: var(--muted-color);
+} 
+
+.experience-date-divider {
+	background-color: var(--muted-color);
+	flex-grow: 0.8;
+	width: 2px;
+	position: relative;
+	margin-left: 1rem;
+}
+
+.experience:not(:last-child) {
+	margin-bottom: 4rem;
+	position: relative;
+}
+
+.experience:not(:last-child)::after {
+	/* background-color: red; */
+	content: '';
+	position: absolute;
+	bottom: -4rem;
+	height: 3rem;
+	width: 2px;
+	letter-spacing: 2px;
+	margin: 0.5rem;
+	margin-left: 1rem;
+	border-left: 4px dotted var(--muted-color);
+}
+
+.experience-date-divider::before, .experience-date-divider::after {
+	content: '';
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: var(--muted-color);
+	position: absolute;
+	left: -4px;
+}
+
+.experience-date-divider::before {
+	top: -5px;
+}
+
+.experience-date-divider::after {
+	bottom: -5px;
+}
+
+.experience-detail {
+	flex-grow: 9;
+}
