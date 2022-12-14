@@ -172,3 +172,37 @@ svg#expertise-network g#labels .active text {
 .experience-date-divider::after {
 	bottom: -5px;
 }
+
+
+.showcase-content {
+	margin: var(--block-spacing-vertical) 0;
+	border-radius: var(--border-radius);
+	background: var(--card-background-color);
+	box-shadow: var(--card-box-shadow);
+}
+
+.showcase-content__image-container {
+	border-radius: var(--border-radius);
+	overflow: hidden;
+}
+
+.showcase-content__image-container img {
+	transition: transform 200ms;
+}
+
+.showcase-content:hover .showcase-content__image-container img {
+	transform: scale(1.05);
+}
+
+.showcase-content__detail {
+	padding: var(--spacing);
+}
+
+.showcase-content:hover {
+	text-decoration: none;
+}
+
+.footer {
+	color: var(--muted-color);
+	font-size: 0.8rem;
+}
