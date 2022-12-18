@@ -4,6 +4,65 @@
 	--font-family: "Open Sans", Sans-serif !important;
 }
 
+.nav-logo {
+	height: 24px;
+	width: 24px;
+	margin-bottom: 2px;
+	margin-right: 2px;
+}
+
+#pc-nav, #sp-nav {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	#sp-nav {
+		display: flex;
+	}
+
+	#pc-nav {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#sp-nav {
+		display: none;
+	}
+
+	#pc-nav {
+		display: flex;
+	}
+}
+
+#sp-nav-sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 999999999;
+	background-color: var(--background-color);
+	transition-duration: 500ms;
+}
+
+#sp-nav-sidebar.closed {
+	left: -100%;
+}
+
+#sp-nav-sidebar.opened {
+	left: 0;
+}
+
+#hamburger-menu-open:hover {
+	cursor: pointer;
+}
+
+#hamburger-menu-close:hover {
+	cursor: pointer;
+}
+
+
 #professional-name {
 	font-size: 48px;
 	font-weight: 600;
@@ -46,13 +105,6 @@
 
 .center-text {
 	text-align: center;
-}
-
-.nav-logo {
-	height: 24px;
-	width: 24px;
-	margin-bottom: 2px;
-	margin-right: 2px;
 }
 
 #expertise-network-container {
