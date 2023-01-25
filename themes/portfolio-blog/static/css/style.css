@@ -44,6 +44,7 @@
 	z-index: 999999999;
 	background-color: var(--background-color);
 	transition-duration: 500ms;
+	box-shadow: var(--card-box-shadow);
 }
 
 #sp-nav-sidebar.closed {
