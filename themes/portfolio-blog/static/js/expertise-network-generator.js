@@ -27,7 +27,7 @@ function drag(simulation) {
   fetch("/js/expertise.json")
     .then((response) => response.json())
     .then((data) => {
-      const width = 480;
+      const width = 640;
       const height = width; // 1:1 aspect ratio
 
       const expertiseNetwork = d3
@@ -38,7 +38,7 @@ function drag(simulation) {
         .attr("viewBox", [-width / 2, -height / 2, width, height]);
 
       const centerForce = d3.forceCenter();
-      const nodeForce = d3.forceManyBody().strength(-250);
+      const nodeForce = d3.forceManyBody().strength(-100);
       const linkForce = d3
         .forceLink(data.links)
         .id((d) => d.id)
@@ -83,7 +83,7 @@ function drag(simulation) {
         .enter()
         .append("circle")
         .attr("r", (n) => {
-          const minSize = 8;
+          const minSize = 6;
           const weightMultiplier = 0.5;
 
           var weight = 0;
@@ -165,9 +165,9 @@ function drag(simulation) {
         .append("text")
         .classed("circleText", true)
         .attr("dx", 0)
-        .attr("dy", 20)
+        .attr("dy", 15)
         .attr("text-anchor", "middle")
-        .attr("font-size", "0.5em")
+        .attr("font-size", "0.4em")
         .text((d) => d.name);
 
       simulation.on("tick", () => {

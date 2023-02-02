@@ -86,6 +86,11 @@
       "type": "techStack"
     },
     {
+      "id": "redis",
+      "name": "Redis",
+      "type": "techStack"
+    },
+    {
       "id": "storage",
       "name": "Storage",
       "type": "concept"
@@ -134,6 +139,186 @@
       "id": "azkaban",
       "name": "Azkaban",
       "type": "techStack"
+    },
+    {
+      "id": "cache",
+      "name": "Cache",
+      "type": "concept"
+    },
+    {
+      "id": "kafka",
+      "name": "Kafka",
+      "type": "techStack"
+    },
+    {
+      "id": "rabbitmq",
+      "name": "RabbitMQ",
+      "type": "techStack"
+    },
+    {
+      "id": "logging",
+      "name": "Logging",
+      "type": "concept"
+    },
+    {
+      "id": "elasticStack",
+      "name": "Elastic Stack",
+      "type": "techStack"
+    },
+    {
+      "id": "monitoring",
+      "name": "Monitoring",
+      "type": "concept"
+    },
+    {
+      "id": "prometheus",
+      "name": "Prometheus",
+      "type": "techStack"
+    },
+    {
+      "id": "grafana",
+      "name": "Grafana",
+      "type": "techStack"
+    },
+    {
+      "id": "apm",
+      "name": "Application Performance Monitoring",
+      "type": "concept"
+    },
+    {
+      "id": "jennifer",
+      "name": "Jennifer",
+      "type": "techStack"
+    },
+    {
+      "id": "datadog",
+      "name": "Datadog",
+      "type": "techStack"
+    },
+    {
+      "id": "monit",
+      "name": "Monit",
+      "type": "techStack"
+    },
+    {
+      "id": "performanceOptimization",
+      "name": "Performance Optimization",
+      "type": "concept"
+    },
+    {
+      "id": "jmeter",
+      "name": "JMeter",
+      "type": "techStack"
+    },
+    {
+      "id": "gatling",
+      "name": "Gatling",
+      "type": "techStack"
+    },
+    {
+      "id": "mocking",
+      "name": "Mocking",
+      "type": "concept"
+    },
+    {
+      "id": "clientLibrary",
+      "name": "Client Library Generation",
+      "type": "concept"
+    },
+    {
+      "id": "springBoot",
+      "name": "Spring Boot",
+      "type": "framework"
+    },
+    {
+      "id": "springFramework",
+      "name": "Spring Framework",
+      "type": "framework"
+    },
+    {
+      "id": "cicd",
+      "name": "CI/CD",
+      "type": "concept"
+    },
+    {
+      "id": "jenkins",
+      "name": "Jenkins",
+      "type": "techStack"
+    },
+    {
+      "id": "ansible",
+      "name": "Ansible",
+      "type": "techStack"
+    },
+    {
+      "id": "argocd",
+      "name": "ArgoCD",
+      "type": "techStack"
+    },
+    {
+      "id": "registry",
+      "name": "Registry",
+      "type": "concept"
+    },
+    {
+      "id": "artifactory",
+      "name": "Artifactory",
+      "type": "techStack"
+    },
+    {
+      "id": "harbor",
+      "name": "Harbor",
+      "type": "techStack"
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes",
+      "type": "techStack"
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "type": "techStack"
+    },
+    {
+      "id": "helm",
+      "name": "Helm",
+      "type": "techStack"
+    },
+    {
+      "id": "kustomize",
+      "name": "Kustomize",
+      "type": "techStack"
+    },
+    {
+      "id": "gke",
+      "name": "Google Kubernetes Engine",
+      "type": "techStack"
+    },
+    {
+      "id": "googleCloud",
+      "name": "Google Cloud",
+      "type": "framework"
+    },
+    {
+      "id": "googleCloudStorage",
+      "name": "Google Cloud Storage",
+      "type": "techStack"
+    },
+    {
+      "id": "amazonCloud",
+      "name": "Amazon Cloud",
+      "type": "framework"
+    },
+    {
+      "id": "amazonS3",
+      "name": "Amazon S3",
+      "type": "techStack"
+    },
+    {
+      "id": "cloudProvider",
+      "name": "Cloud Provider",
+      "type": "concept"
     }
   ],
   "links": [
@@ -152,6 +337,7 @@
     { "source": "database", "target": "mongodb" },
     { "source": "database", "target": "hadoop" },
     { "source": "database", "target": "couchbase" },
+    { "source": "database", "target": "redis" },
     { "source": "storage", "target": "bigDataStorage" },
     { "source": "storage", "target": "database" },
     { "source": "storage", "target": "cloudStorage" },
@@ -167,6 +353,45 @@
     { "source": "batch", "target": "batchScheduling" },
     { "source": "batchScheduling", "target": "crontab" },
     { "source": "batchScheduling", "target": "azkaban" },
-    { "source": "batch", "target": "bigDataProcessing" }
+    { "source": "batch", "target": "bigDataProcessing" },
+    { "source": "storage", "target": "cache" },
+    { "source": "cache", "target": "redis" },
+    { "source": "stream", "target": "kafka" },
+    { "source": "stream", "target": "rabbitmq" },
+    { "source": "microservice", "target": "logging" },
+    { "source": "logging", "target": "elasticStack" },
+    { "source": "microservice", "target": "monitoring" },
+    { "source": "monitoring", "target": "prometheus" },
+    { "source": "monitoring", "target": "grafana" },
+    { "source": "monitoring", "target": "monit" },
+    { "source": "monitoring", "target": "apm" },
+    { "source": "apm", "target": "jennifer" },
+    { "source": "apm", "target": "datadog" },
+    { "source": "restApi", "target": "performanceOptimization" },
+    { "source": "performanceOptimization", "target": "jmeter" },
+    { "source": "performanceOptimization", "target": "gatling" },
+    { "source": "openApi", "target": "mocking" },
+    { "source": "openApi", "target": "clientLibrary" },
+    { "source": "restApi", "target": "springBoot" },
+    { "source": "springFramework", "target": "springBoot" },
+    { "source": "springFramework", "target": "springBatch" },
+    { "source": "microservice", "target": "cicd" },
+    { "source": "cicd", "target": "jenkins" },
+    { "source": "cicd", "target": "ansible" },
+    { "source": "cicd", "target": "argocd" },
+    { "source": "cicd", "target": "registry" },
+    { "source": "registry", "target": "artifactory" },
+    { "source": "registry", "target": "harbor" },
+    { "source": "cicd", "target": "kubernetes" },
+    { "source": "cicd", "target": "docker" },
+    { "source": "kubernetes", "target": "helm" },
+    { "source": "kubernetes", "target": "kustomize" },
+    { "source": "gke", "target": "kubernetes" },
+    { "source": "googleCloud", "target": "gke" },
+    { "source": "googleCloud", "target": "googleCloudStorage" },
+    { "source": "cloudStorage", "target": "googleCloudStorage" },
+    { "source": "cloudProvider", "target": "googleCloud" },
+    { "source": "cloudProvider", "target": "amazonCloud" },
+    { "source": "amazonCloud", "target": "amazonS3" }
   ]
 }
