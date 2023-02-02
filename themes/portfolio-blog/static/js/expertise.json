@@ -1,35 +1,172 @@
 {
   "nodes": [
     {
-      "id": 1,
-      "name": "Microservices"
+      "id": "microservice",
+      "name": "Microservice",
+      "type": "concept"
     },
     {
-      "id": 2,
-      "name": "API"
+      "id": "api",
+      "name": "API",
+      "type": "concept"
     },
     {
-      "id": 3,
-      "name": "Rest API"
+      "id": "restApi",
+      "name": "Rest API",
+      "type": "concept"
     },
     {
-      "id": 4,
-      "name": "RPC"
+      "id": "rpc",
+      "name": "RPC",
+      "type": "concept"
     },
     {
-      "id": 5,
-      "name": "gRPC"
+      "id": "grpc",
+      "name": "gRPC",
+      "type": "framework"
     },
     {
-      "id": 6,
-      "name": "Open API"
+      "id": "openApi",
+      "name": "Open API",
+      "type": "framework"
+    },
+    {
+      "id": "bigData",
+      "name": "Big Data",
+      "type": "concept"
+    },
+    {
+      "id": "bigDataStorage",
+      "name": "Big Data Storage",
+      "type": "concept"
+    },
+    {
+      "id": "bigDataProcessing",
+      "name": "Big Data Processing",
+      "type": "concept"
+    },
+    {
+      "id": "hadoop",
+      "name": "Hadoop",
+      "type": "techStack"
+    },
+    {
+      "id": "hive",
+      "name": "Hive",
+      "type": "techStack"
+    },
+    {
+      "id": "spark",
+      "name": "Spark",
+      "type": "techStack"
+    },
+    {
+      "id": "database",
+      "name": "Databases",
+      "type": "concept"
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "type": "techStack"
+    },
+    {
+      "id": "mariadb",
+      "name": "MariaDB",
+      "type": "techStack"
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "type": "techStack"
+    },
+    {
+      "id": "couchbase",
+      "name": "Couchbase",
+      "type": "techStack"
+    },
+    {
+      "id": "storage",
+      "name": "Storage",
+      "type": "concept"
+    },
+    {
+      "id": "cloudStorage",
+      "name": "Cloud Storage",
+      "type": "concept"
+    },
+    {
+      "id": "batch",
+      "name": "Batch",
+      "type": "concept"
+    },
+    {
+      "id": "stream",
+      "name": "Stream",
+      "type": "concept"
+    },
+    {
+      "id": "springBatch",
+      "name": "Spring Batch",
+      "type": "framework"
+    },
+    {
+      "id": "shellBatch",
+      "name": "Shell Script Batch",
+      "type": "framework"
+    },
+    {
+      "id": "sparkBatch",
+      "name": "Spark Batch",
+      "type": "framework"
+    },
+    {
+      "id": "batchScheduling",
+      "name": "Batch Scheduling",
+      "type": "concept"
+    },
+    {
+      "id": "crontab",
+      "name": "Crontab",
+      "type": "techStack"
+    },
+    {
+      "id": "azkaban",
+      "name": "Azkaban",
+      "type": "techStack"
     }
   ],
   "links": [
-    { "source": 1, "target": 2 },
-    { "source": 2, "target": 3 },
-    { "source": 2, "target": 4 },
-    { "source": 3, "target": 6 },
-    { "source": 4, "target": 5 }
+    { "source": "microservice", "target": "api" },
+    { "source": "api", "target": "restApi" },
+    { "source": "api", "target": "rpc" },
+    { "source": "restApi", "target": "openApi" },
+    { "source": "rpc", "target": "grpc" },
+    { "source": "bigData", "target": "bigDataStorage" },
+    { "source": "bigDataStorage", "target": "hadoop" },
+    { "source": "bigData", "target": "bigDataProcessing" },
+    { "source": "bigDataProcessing", "target": "hive" },
+    { "source": "bigDataProcessing", "target": "spark" },
+    { "source": "database", "target": "mysql" },
+    { "source": "database", "target": "mariadb" },
+    { "source": "database", "target": "mongodb" },
+    { "source": "database", "target": "hadoop" },
+    { "source": "database", "target": "couchbase" },
+    { "source": "storage", "target": "bigDataStorage" },
+    { "source": "storage", "target": "database" },
+    { "source": "storage", "target": "cloudStorage" },
+    { "source": "api", "target": "storage" },
+    { "source": "microservice", "target": "batch" },
+    { "source": "microservice", "target": "stream" },
+    { "source": "batch", "target": "springBatch" },
+    { "source": "batch", "target": "storage" },
+    { "source": "stream", "target": "storage" },
+    { "source": "batch", "target": "shellBatch" },
+    { "source": "batch", "target": "sparkBatch" },
+    { "source": "sparkBatch", "target": "spark" },
+    { "source": "batch", "target": "batchScheduling" },
+    { "source": "batchScheduling", "target": "crontab" },
+    { "source": "batchScheduling", "target": "azkaban" },
+    { "source": "batch", "target": "bigDataProcessing" }
   ]
 }

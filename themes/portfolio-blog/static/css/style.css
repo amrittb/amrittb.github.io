@@ -1,6 +1,9 @@
 :root {
 	--primary: #546e7a !important;
 	--secondary: #68547a !important;
+	--concept-color: #81ecec;
+	--framework-color: #a29bfe;
+	--techstack-color: #ff7675;
 	--font-family: "Open Sans", Sans-serif !important;
 }
 
@@ -145,6 +148,18 @@ svg#expertise-network g#links line.active  {
 svg#expertise-network g#nodes circle {
 	transition-property: fill, fill-opacity;
 	transition-duration: 200ms;
+}
+
+svg#expertise-network g#nodes circle.concept {
+	fill: var(--concept-color);
+}
+
+svg#expertise-network g#nodes circle.framework {
+	fill: var(--framework-color);
+}
+
+svg#expertise-network g#nodes circle.techStack {
+	fill: var(--techstack-color);
 }
 
 svg#expertise-network g#nodes circle:hover {

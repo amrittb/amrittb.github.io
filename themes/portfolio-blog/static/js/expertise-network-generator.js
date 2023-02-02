@@ -27,7 +27,7 @@ function drag(simulation) {
   fetch("/js/expertise.json")
     .then((response) => response.json())
     .then((data) => {
-      const width = 320;
+      const width = 480;
       const height = width; // 1:1 aspect ratio
 
       const expertiseNetwork = d3
@@ -38,7 +38,7 @@ function drag(simulation) {
         .attr("viewBox", [-width / 2, -height / 2, width, height]);
 
       const centerForce = d3.forceCenter();
-      const nodeForce = d3.forceManyBody().strength(-200);
+      const nodeForce = d3.forceManyBody().strength(-250);
       const linkForce = d3
         .forceLink(data.links)
         .id((d) => d.id)
@@ -57,10 +57,22 @@ function drag(simulation) {
         .data(data.links)
         .join("line");
 
-      // Create connection set
-      const connections = new Set();
+      const sourceToTargetMap = new Map();
+      const targetToSourceMap = new Map();
+
+      // Source -> Target map
+      // Target -> Source map
       data.links.forEach((l) => {
-        connections.add(l.source.id + "," + l.target.id);
+        if (!sourceToTargetMap.has(l.source.id)) {
+          sourceToTargetMap.set(l.source.id, new Set());
+        }
+
+        if (!targetToSourceMap.has(l.target.id)) {
+          targetToSourceMap.set(l.target.id, new Set());
+        }
+
+        sourceToTargetMap.get(l.source.id).add(l.target.id);
+        targetToSourceMap.get(l.target.id).add(l.source.id);
       });
 
       const node = expertiseNetwork
@@ -70,27 +82,58 @@ function drag(simulation) {
         .data(data.nodes)
         .enter()
         .append("circle")
-        .attr("r", 10)
+        .attr("r", (n) => {
+          const minSize = 8;
+          const weightMultiplier = 0.5;
+
+          var weight = 0;
+          if (sourceToTargetMap.has(n.id)) {
+            weight += sourceToTargetMap.get(n.id).size;
+          }
+
+          if (targetToSourceMap.has(n.id)) {
+            weight += targetToSourceMap.get(n.id).size;
+          }
+
+          return minSize + weight * weightMultiplier;
+        })
+        .attr("class", (n) => {
+          // Add class based on node type for styling
+          return n.type;
+        })
         .call(drag(simulation))
         .on("mouseover", (event, hoveredNode) => {
           expertiseNetwork.classed("hovered", true);
+
+          var activeNodes = new Set();
+          // Hovered node also should be active
+          activeNodes.add(hoveredNode.id);
+
+          // Add the children of this hovered node as active nodes
+          if (sourceToTargetMap.has(hoveredNode.id)) {
+            activeNodes = new Set([
+              ...activeNodes,
+              ...sourceToTargetMap.get(hoveredNode.id),
+            ]);
+          }
+
+          // Add the parent of this hovered node as active nodes
+          if (targetToSourceMap.has(hoveredNode.id)) {
+            activeNodes = new Set([
+              ...activeNodes,
+              ...targetToSourceMap.get(hoveredNode.id),
+            ]);
+          }
+
           node
             .filter((n) => {
-              return (
-                connections.has(hoveredNode.id + "," + n.id) ||
-                connections.has(n.id + "," + hoveredNode.id) ||
-                n.id == hoveredNode.id
-              );
+              return activeNodes.has(n.id);
             })
             .classed("active", true);
 
           label
             .filter((l) => {
-              return (
-                connections.has(hoveredNode.id + "," + l.id) ||
-                connections.has(l.id + "," + hoveredNode.id) ||
-                l.id == hoveredNode.id
-              );
+              return activeNodes.has(l.id);
             })
             .classed("active", true);
 
