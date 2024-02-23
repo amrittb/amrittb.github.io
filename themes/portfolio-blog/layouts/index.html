@@ -1,127 +1,16 @@
 {{ define "main" }}
 <section id="intro" class="container-fluid">
 	<div id="hero" class="container">
-		<h1 id="professional-name" class="center-text" data-aos="fade-up">
-			{{ .Site.Params.LastName }} {{ .Site.Params.FirstName}}
+		<h1 id="professional-name" class="center-text" >
+			Hi. I'm {{ .Site.Params.FirstName}}.
 		</h1>
-		<h4 id="professional-title" class="center-text" data-aos="fade-up" data-aos-delay="200"
+		<h4 id="professional-title" class="center-text" 
 			style="margin-bottom: 0">
-			{{ .Site.Params.Subtitle }}
+			A {{ .Site.Params.Subtitle }}.
 		</h4>
 		<div id="hero-img" class="center-text">
-			<img src="/images/engineer.svg" alt="" data-aos="fade-in" data-aos-delay="400" />
-		</div>
-		<div id="hero-scroll" class="center-text">
-			<i class="fa-solid fa-angles-down" data-aos="fade-up" data-aos-delay="600" data-aos-anchor="#hero-img"></i>
+			<img src="/images/engineer.svg" alt="" />
 		</div>
 	</div>
 </section>
-
-<section id="expertise" class="container">
-	<a id="expertise"></a>
-	<h3 class="center-text" data-aos="fade-up">Expertise</h3>
-	<div id="expertise-network-container" data-aos="fade-in"></div>
-</section>
-
-<section id="professional-experience" class="container" data-aos="fade-in">
-	<a id="experience"></a>
-	<h3 class="center-text" data-aos="fade-up">Professional Experience</h3>
-	<div id="experience-container">
-		<div class="experience">
-			<div class="experience-date">
-				<div class="experience-end">Present</div>
-				<div class="experience-date-divider"></div>
-				<div class="experience-start">May 2019</div>
-			</div>
-			<div class="experience-detail">
-				<div class="experience-role-title headings">
-					<h4>Software Engineer</h4>
-					<h5><a href="https://global.rakuten.com/corp/" target="_blank">Rakuten Group, Inc.</a></h5>
-				</div>
-				<div class="experience-role-detail">
-					<ul>
-						<li>Transitioned monolithic application into several microservices</li>
-						<li>Built system architecture and lead development of SaaS projects</li>
-						<li>On-premis to cloud migration of microservices</li>
-						<li>Built horizontally scalable APIs to handle thousands of users</li>
-						<li>Created streaming systems to handle millions of events per day</li>
-						<li>Developed batch jobs to process Gigabytes of data using Big Data tools</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="experience">
-			<div class="experience-date">
-				<div class="experience-end">Apr 2019</div>
-				<div class="experience-date-divider"></div>
-				<div class="experience-start">Jun 2018</div>
-			</div>
-			<div class="experience-detail">
-				<div class="experience-role-title headings">
-					<h4>VR Developer</h4>
-					<h5><a href="https://www.paracosma.com/" target="_blank">Paracosma, Inc.</a></h5>
-				</div>
-				<div class="experience-role-detail">
-					<ul>
-						<li>Developed several levels of Open World VR Game</li>
-						<li>User training applications built using AR & VR to reduce on-site training cost</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- 
-<section id="showcase" class="container-fluid">
-	<a id="showcase"></a>
-	<h3 class="center-text" data-aos="fade-up">Showcase</h3>
-	<div class="container">
-		<div id="showcase-container" class="grid" data-aos="fade-in">
-			<a href="https://github.com/amrittb/mnc-2d" class="showcase-content">
-				<div class="showcase-content__image-container">
-					<img src="https://github.com/amrittb/mnc-2d/raw/master/screenshot.PNG" alt="">
-				</div>
-				<div class="showcase-content__detail">
-					Project 1
-				</div>
-			</a>
-			<a href="https://github.com/amrittb/mnc-2d" class="showcase-content">
-				<div class="showcase-content__image-container">
-					<img src="https://github.com/amrittb/mnc-2d/raw/master/screenshot.PNG" alt="">
-				</div>
-				<div class="showcase-content__detail">
-					Project 1
-				</div>
-			</a>
-			<a href="https://github.com/amrittb/mnc-2d" class="showcase-content">
-				<div class="showcase-content__image-container">
-					<img src="https://github.com/amrittb/mnc-2d/raw/master/screenshot.PNG" alt="">
-				</div>
-				<div class="showcase-content__detail">
-					Project 1
-				</div>
-			</a>
-
-		</div>
-	</div>
-</section> -->
-
-<section id="contact">
-	<a id="contact"></a>
-	<h3 class="center-text" data-aos="fade-up">Contact</h3>
-	<div class="container">
-		<form data-aos="fade-in" action="mailto:amrit.cas@gmail.com" method="post" enctype="text/plain">
-			<div class="grid">
-				<input type="text" name="name" placeholder="Name" required>
-				<input type="email" name="email" placeholder="Email" required>
-			</div>
-			<textarea name="detail" cols="30" rows="10"></textarea>
-			<input type="submit" value="Get in touch">
-		</form>
-	</div>
-
-</section>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
-<script src="/js/expertise-network-generator.js"></script>
 {{ end }}

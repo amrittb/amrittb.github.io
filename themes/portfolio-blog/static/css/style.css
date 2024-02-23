@@ -4,7 +4,7 @@
 	--concept-color: #81ecec;
 	--framework-color: #a29bfe;
 	--techstack-color: #ff7675;
-	--font-family: "Open Sans", Sans-serif !important;
+	--pico-font-family: "Noto Serif", serif !important;
 }
 
 .nav-logo {
@@ -13,59 +13,6 @@
 	margin-bottom: 2px;
 	margin-right: 2px;
 }
-
-#pc-nav, #sp-nav {
-	display: none;
-}
-
-@media only screen and (max-width: 768px) {
-	#sp-nav {
-		display: flex;
-	}
-
-	#pc-nav {
-		display: none;
-	}
-}
-
-@media only screen and (min-width: 768px) {
-	#sp-nav {
-		display: none;
-	}
-
-	#pc-nav {
-		display: flex;
-	}
-}
-
-#sp-nav-sidebar {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 999999999;
-	background-color: var(--background-color);
-	transition-duration: 500ms;
-	box-shadow: var(--card-box-shadow);
-}
-
-#sp-nav-sidebar.closed {
-	left: -100%;
-}
-
-#sp-nav-sidebar.opened {
-	left: 0;
-}
-
-#hamburger-menu-open:hover {
-	cursor: pointer;
-}
-
-#hamburger-menu-close:hover {
-	cursor: pointer;
-}
-
 
 #professional-name {
 	font-size: 48px;
@@ -78,7 +25,7 @@
 }
 
 #hero {
-	padding-top: 4rem;
+	padding-top: 8rem;
 }
 
 #hero #hero-img img {
